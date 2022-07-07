@@ -2,7 +2,6 @@ import { lightGreen } from "@mui/material/colors";
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import "./Register.css";
 
 const Register = () => {
@@ -41,6 +40,7 @@ const Register = () => {
       console.log("register error", err);
     }
   };
+
 
   return (
     <div className="Test">

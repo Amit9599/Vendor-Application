@@ -3,7 +3,7 @@ import axios from "axios";
 import { useSearchParams } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function OtpVerification() {
+export default function MotpVerify() {
 const [searchParams, setSearchParams] = useSearchParams();
 
 let navigate = useNavigate();
@@ -17,10 +17,10 @@ let [otp, setOtp] = useState("")
 const verify = async () => {
     try {
       let response = await axios.post(
-        "https://loanprojectapi.herokuapp.com/api/verify/otp",{mobile:searchParams.get("mobile"), otp:otp}
+        "https://loanprojectapi.herokuapp.com/api/verify/otp",{mobile:searchParams.get("mobile"), otp:otp, type:"forgotPass"}
       );
       if(response.data.success){
-        navigate(`/createPassword?mobile=${searchParams.get("mobile")}&otp=${otp}`)
+        navigate(`/McreatePass?mobile=${searchParams.get("mobile")}&type="forgotPass"`)
       } else{
         console.log("wrong otp")
       }

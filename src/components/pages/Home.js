@@ -36,7 +36,7 @@ export default function MenuAppBar( props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
    
@@ -71,12 +71,13 @@ export default function MenuAppBar( props) {
 
          
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        
+           
+            
             
             <div className='aaru'>
-            <Link to="/register">
+            <Link to="/Login">
               <Button color='inherit'>Login</Button></Link>
-              <Link to="/Login">
+              <Link to="/register">
               <Button color='inherit'>Sign Up</Button></Link>
 
             </div>
